@@ -30,6 +30,14 @@ MyDocumentGenerator >> generateDocumentForClass: aClass [
     	writeStreamDo: [ :stream | stream nextPutAll: aStream contents ].
 ]
 
+{ #category : #generating }
+MyDocumentGenerator >> generateDocumentsForPackage: aPackage [
+	|classes|
+
+	classes := (RPackageOrganizer default packageNamed: aPackage asString  ) classes.
+	classes do: [ :class | self generateDocumentForClass: class ].
+]
+
 { #category : #'private - utility' }
 MyDocumentGenerator >> methods: aClass [
 	|methods selectors|

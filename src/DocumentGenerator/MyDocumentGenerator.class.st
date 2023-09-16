@@ -1,3 +1,17 @@
+"
+Class: MyDocumentGenerator
+                                                                                                    
+I am a class for generating document file(s). Given a package name or a class object, I generate document file(s) for each class with the class name in the directory of your created image, which contains the class name, its subclasses, its superclass, its instance variables and its methods.
+
+
+Public API and Key Messages
+
+•	generateDocumentForClass: aClass
+•	generateDocumentForPackage: aPackageName
+
+
+I have used reflection provided by Pharo.
+"
 Class {
 	#name : #MyDocumentGenerator,
 	#superclass : #Object,

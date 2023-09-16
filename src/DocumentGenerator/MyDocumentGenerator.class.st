@@ -54,6 +54,8 @@ MyDocumentGenerator >> generateDocumentsForPackage: aPackageName [
 
 { #category : #'private - utility' }
 MyDocumentGenerator >> methods: aClass [
+	"I take a class and return its methods' names"
+
 	|methods selectors|
 	
 	selectors := aClass selectors.

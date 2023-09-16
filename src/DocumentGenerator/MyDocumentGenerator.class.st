@@ -24,6 +24,7 @@ MyDocumentGenerator >> generateDocumentForClass: aClass [
 	aStream nextPutAll: aClass superclass name; cr; cr.
 	aStream nextPutAll: 'instanceVariables: '.
 	aStream nextPutAll: aClass instanceVariables asString; cr; cr.
+	aStream nextPutAll: 'methods: '; cr.
 	aStream nextPutAll: (self methods: aClass).
 
 	fileName  asFileReference ensureDelete; 
@@ -43,13 +44,13 @@ MyDocumentGenerator >> methods: aClass [
 	|methods selectors|
 	
 	selectors := aClass selectors.
-	methods := WriteStream on: String new.
+	methods := String new writeStream.
 
 	selectors do: [:selector |
 		methods nextPutAll: '- '. 
 		methods nextPutAll: selector; cr.
 	].
-	^ methods.
+	^ methods contents.
 	
-	
+
 ]

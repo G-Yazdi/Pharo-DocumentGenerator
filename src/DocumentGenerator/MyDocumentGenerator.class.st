@@ -20,8 +20,9 @@ Class {
 
 { #category : #generating }
 MyDocumentGenerator >> generateDocumentForClass: aClass [
-	"comment stating purpose of instance-side method"
-	"scope: class-variables  &  instance-variables"
+	"Given a class, I generate a file with the class name (e.g., className.txt) in the directory of my image."
+	"This file contains the class name, its subclasses, its superclass, its instance variables and its methods. "
+	
 
 	|aStream fileName|
 

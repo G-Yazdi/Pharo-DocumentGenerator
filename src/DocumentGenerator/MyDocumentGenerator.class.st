@@ -31,10 +31,10 @@ MyDocumentGenerator >> generateDocumentForClass: aClass [
 ]
 
 { #category : #generating }
-MyDocumentGenerator >> generateDocumentsForPackage: aPackage [
-	|classes|
+MyDocumentGenerator >> generateDocumentsForPackage: aPackageName [
 
-	classes := (RPackageOrganizer default packageNamed: aPackage asString  ) classes.
+	|classes|
+	classes := (RPackageOrganizer default packageNamed: aPackageName  ) classes.
 	classes do: [ :class | self generateDocumentForClass: class ].
 ]
 

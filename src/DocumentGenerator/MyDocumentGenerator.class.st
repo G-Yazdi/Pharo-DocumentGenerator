@@ -1,9 +1,6 @@
 Class {
 	#name : #MyDocumentGenerator,
 	#superclass : #Object,
-	#instVars : [
-		'document'
-	],
 	#category : #DocumentGenerator
 }
 

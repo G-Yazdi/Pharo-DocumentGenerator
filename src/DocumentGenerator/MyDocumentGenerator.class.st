@@ -45,6 +45,7 @@ MyDocumentGenerator >> generateDocumentForClass: aClass [
 
 { #category : #generating }
 MyDocumentGenerator >> generateDocumentsForPackage: aPackageName [
+	"I take the name of a package and generate a document file for each of its classes."
 
 	|classes|
 	classes := (RPackageOrganizer default packageNamed: aPackageName  ) classes.
